@@ -44,11 +44,11 @@ public class Opskrift {
         double totalEnergiKcal = 0;
 
         for (Ingrediens ingrediens : ingredienser) {
-            double energiPerEnhed = ingrediens.getEnergiPerEnhed(); // Få energiindhold per enhed fra Ingrediens-klassen
-            double enhedsMængde = ingrediens.getMængde(); // Mængde per enhed (f.eks. gram)
+            double energiPerEnhed = ingrediens.getEnergiPerEnhed();
+            double enhedsMængde = ingrediens.getMængde();
             double samletMængde = enhedsMængde * antalPersoner;
-            double energiKilojoule = energiPerEnhed * samletMængde;
-            double energiKcal = energiKilojoule * 0.239;  // Omregning fra kJ til kcal
+            double energiKilojoule = (energiPerEnhed / 1000) * samletMængde;
+            double energiKcal = energiKilojoule * 0.239;
             totalEnergiKilojoule += energiKilojoule;
             totalEnergiKcal += energiKcal;
         }
@@ -57,6 +57,7 @@ public class Opskrift {
         System.out.println("Kilojoule: " + totalEnergiKilojoule + " kJ");
         System.out.println("Kcal: " + totalEnergiKcal + " kcal");
     }
+
 
     private double beregnSamletVægtFørBagning() {
         double samletVægt = 0;
