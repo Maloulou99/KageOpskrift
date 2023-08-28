@@ -5,15 +5,12 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-                int antalPersoner = 8;
-                Opskrift opskrift = new Opskrift(antalPersoner);
+        int antalPersoner = 8;
+        Opskrift opskrift = new Opskrift(antalPersoner);
 
-                opskrift.udskrivOpskrift();
-                opskrift.udskrivSamletVægtFørBagning();
-                opskrift.udskrivSamletVægtEfterBagning();
-                opskrift.udskrivEnergiIndhold();
-            }
-        }
-
+        opskrift.udskrivOpskrift();
+        opskrift.udskrivSamletVægtEfterBagning();
+        opskrift.udskrivEnergiIndhold();
     }
+
 }
