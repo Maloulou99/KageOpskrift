@@ -8,6 +8,7 @@ public class Main {
         int antalPersoner = 8;
         Opskrift opskrift = new Opskrift(antalPersoner);
 
+        
         opskrift.udskrivOpskrift();
         opskrift.udskrivSamletVægtEfterBagning();
         opskrift.udskrivEnergiIndhold();
